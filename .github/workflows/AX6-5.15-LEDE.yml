@@ -89,17 +89,17 @@ jobs:
         
         rom=openwrt/bin/targets/ipq807x/generic/openwrt-ipq807x-generic-redmi_ax6-squashfs-nand-sysupgrade.bin
         getmd5 $rom        
-        cp -a $rom ./AXBNG/Swrt-Redmi-AX6-5.15-sysupgrade-$(date +%Y%m%d)_${md5}.bin
+        cp -a $rom ./AXBNG/Redmi-AX6-5.15-sysupgrade.bin
         
         rom=openwrt/bin/targets/ipq807x/generic/openwrt-ipq807x-generic-redmi_ax6-squashfs-nand-factory.ubi
         getmd5 $rom           
-        cp -a $rom ./AXBNG/Swrt-Redmi-AX6-5.15-factory-$(date +%Y%m%d)_${md5}.ubi
+        cp -a $rom ./AXBNG/Redmi-AX6-5.15-factory.ubi
                
     - name: Upload Firmwares
       uses: actions/upload-artifact@main
       with:
         name: AX6-5.15-LEDE
-        path: AXBNG/S*
+        path: AXBNG/Red*
 
     - name: Upload config
       uses: actions/upload-artifact@main
@@ -125,7 +125,7 @@ jobs:
     - name: Create Release & Upload
       uses: ncipollo/release-action@v1
       with:
-        artifacts: AXBNG/S*
+        artifacts: AXBNG/Red*
         name: ${{ steps.generate_name.outputs.release_name }}
         tag: ${{ steps.generate_name.outputs.release_tag }}
         token: ${{ secrets.GITHUB_TOKEN }}
