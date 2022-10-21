@@ -3,8 +3,11 @@ name: AX6-5.10-LEDE
 on: 
   repository_dispatch:
   workflow_dispatch:
-
-# 定时触发编译
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
   schedule:
     - cron: 0 16 * * *
 
