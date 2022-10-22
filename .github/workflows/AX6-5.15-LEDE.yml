@@ -140,10 +140,10 @@ jobs:
         keep_minimum_runs: 5
 
     - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@v0.1.0
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      uses: dev-drprasad/delete-older-releases@v0.2.0
       with:
+        repo: <owner>/<repoName> # defaults to current repo
         keep_latest: 5
-        delete_tags: true
+        delete_tag_pattern: beta # defaults to ""
       env:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
