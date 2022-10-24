@@ -144,6 +144,6 @@ jobs:
       with:
         repo: <owner>/<repoName> # defaults to current repo
         keep_latest: 5
-        delete_tag_pattern: beta # defaults to ""
+        delete_tag_pattern: true # defaults to ""
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
