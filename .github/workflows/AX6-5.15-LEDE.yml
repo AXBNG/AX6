@@ -134,8 +134,9 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
+        token: ${{ github.token }}
         retain_days: 5
         keep_minimum_runs: 5
 
