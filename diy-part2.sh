@@ -19,6 +19,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 #更换lede源码中自带argon主题
 rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
+#删除旧版adg
+rm -rf feeds/packages/net/adguardhome
+
 echo 'refresh feeds'
 ./scripts/feeds update -a
 ./scripts/feeds install -a
