@@ -13,13 +13,12 @@
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
-#更换原版argon主题
+#替换主题为原版argon
 rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
-#删除旧版adg
+#删除部分包以追新
 rm -rf feeds/packages/net/adguardhome
-
-#删除旧版aliyundrive-webdav
+rm -rf feeds/luci/applications/luci-app-pushbot
 rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
 rm -rf feeds/packages/multimedia/aliyundrive-webdav
 
