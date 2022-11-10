@@ -22,8 +22,6 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 #删除部分包以追新
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/adguardhome
-rm -rf feeds/packages/multimedia/aliyundrive-webdav
-rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
 
 echo 'refresh feeds'
 ./scripts/feeds update -a
