@@ -22,7 +22,6 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 
 #删除部分旧包
 rm -rf feeds/packages/net/smartdns
-rm -rf feeds/packages/net/adguardhome
 
 echo 'refresh feeds'
 ./scripts/feeds update -a
