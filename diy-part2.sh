@@ -18,7 +18,6 @@ rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.c
 
 #添加最新版smartdns
 rm -rf feeds/packages/net/smartdns && git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 
 echo 'refresh feeds'
 ./scripts/feeds update -a
