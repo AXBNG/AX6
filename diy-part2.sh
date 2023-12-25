@@ -17,7 +17,8 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
 #添加最新版smartdns
-rm -rf feeds/packages/net/smartdns && git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
 
 echo 'refresh feeds'
 ./scripts/feeds update -a
