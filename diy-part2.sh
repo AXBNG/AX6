@@ -20,6 +20,10 @@ rm -rf feeds/luci/themes/luci-theme-argon && git clone -b 18.06 https://github.c
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 
+#添加最新版webdav
+rm -rf feeds/packages/multimedia/aliyundrive-webdav
+rm -rf feeds/luci/applications/luci-app-aliyundrive-webdav
+
 echo 'refresh feeds'
 ./scripts/feeds update -a
 ./scripts/feeds install -a
